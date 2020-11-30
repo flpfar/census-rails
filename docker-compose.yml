@@ -1,0 +1,23 @@
+version: '3'
+services:
+  web:
+    build: .
+    container_name: census-rails
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/census
+      - gem_cache:/usr/local/bundle/gems
+    env_file:
+      - .env
+    depends_on:
+      - db
+  db:
+    image: postgres:12-alpine
+    env_file:
+      - .env
+    volumes:
+      - census-rails:/var/lib/postgresql/data
+volumes:
+  census-rails:
+  gem_cache:
