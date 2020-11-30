@@ -1,24 +1,33 @@
-# README
+# Census Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> A rails application that shows statistics about people names in Brazil.
 
-Things you may want to cover:
+## Getting Started w/ Docker
 
-* Ruby version
+### Prerequisites
 
-* System dependencies
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+- Create file `.env` (you can copy the content from `.env.sample` in root directory for default values)
 
-* Configuration
 
-* Database creation
+### Setup
 
-* Database initialization
+- Navigate to the project folder with `cd census-rails` and run:
 
-* How to run the test suite
+```
+docker-compose build
+docker-compose run --rm web bin/setup
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Running
 
-* Deployment instructions
+- Run `docker-compose up` and access it through: `http://localhost:3000`
 
-* ...
+### Run tests
+
+- Run `docker-compose run --rm web rspec`
+
+### Docker bash
+
+- `docker-compose run --rm web bash`
