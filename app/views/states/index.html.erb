@@ -1,0 +1,4 @@
+<h1>ESTADOS</h1>
+<% @states.each do |state| %>
+  <%= link_to state.initials, locale_rankings_path(state.locale_id) %>
+<% end %>

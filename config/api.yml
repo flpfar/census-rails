@@ -1,0 +1,11 @@
+test:
+  locales: https://servicodados.ibge.gov.br/api/v1/localidades
+  names: https://servicodados.ibge.gov.br/api/v2/censos/nomes
+
+development:
+  locales: https://servicodados.ibge.gov.br/api/v1/localidades
+  names: https://servicodados.ibge.gov.br/api/v2/censos/nomes
+
+production:
+  locales: https://servicodados.ibge.gov.br/api/v1/localidades
+  names: https://servicodados.ibge.gov.br/api/v2/censos/nomes
