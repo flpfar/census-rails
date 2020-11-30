@@ -1,4 +1,14 @@
-<% @ranking.each do |name| %>
-  <%= name.name.capitalize %>
-  <%= name.rate %>
-<% end %>
+<table>
+  <tr>
+    <th align="left">#</th>
+    <th align="left">Nome</th>
+    <th align="left">Frequência</th>
+  </tr>
+  <% @ranking.each do |name| %>
+    <tr>
+      <td><%= name.ranking %></td>
+      <td><%= name.name.capitalize %></td>
+      <td><%= name.rate %></td>
+    </tr>
+  <% end %>
+</table>

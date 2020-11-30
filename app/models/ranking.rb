@@ -7,6 +7,6 @@ class Ranking
     parsed = JSON.parse(response.body, symbolize_names: true)[0]
     parsed[:res].map do |name|
       RankedName.new(name: name[:nome], ranking: name[:ranking], rate: name[:frequencia])
-    end.sort_by(&:rate)
+    end.sort_by(&:ranking)
   end
 end
